@@ -1,0 +1,87 @@
+
+
+header {
+    position: relative;
+    background: #1c1c1c;
+    width: 100%;
+    height: 50px;
+    min-width: 1000px;
+    z-index: 900002!important;
+    display: block;
+}
+
+header .container {
+    overflow: visible;
+    width: 1000px;
+}
+
+.group {
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+header .logo {
+    float: left;
+    width: 185px;
+    height: 40px;
+    margin-top: 6px;
+}
+header .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hide-text {
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    text-shadow: none;
+
+}
+
+.section-search {
+    position: relative;
+}
+.section-search .search {
+    float: left;
+    margin-top: 10px;
+    width: 355px;
+    position: relative;
+}
+.section-search .search .input-txt {
+    float: left;
+    padding: 5px 15px;
+    width: 100%;
+    border: 0 none;
+    height: 29px;
+}
+.section-search .search .input-btn {
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nav-account a{
+	color: #fff;
+	text-decoration: none;
+}
+.nav-account a:hover{
+	text-decoration: underline;
+}
+header .nav-account {
+    line-height: 50px;
+    font-weight: 300;
+}
+.pull-right {
+    float: right;
+}
+
+
