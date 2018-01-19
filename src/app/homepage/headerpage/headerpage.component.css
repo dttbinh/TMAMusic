@@ -1,5 +1,4 @@
 
-
 header {
     position: relative;
     background: #1c1c1c;
@@ -43,7 +42,6 @@ header .logo a {
     background-color: transparent;
     color: transparent;
     text-shadow: none;
-
 }
 
 .section-search {
@@ -76,12 +74,10 @@ header .logo a {
 .nav-account a:hover{
 	text-decoration: underline;
 }
-header .nav-account {
-    line-height: 50px;
-    font-weight: 300;
-}
+
 .pull-right {
     float: right;
+   line-height: 50px;
 }
 
 .menubar{
@@ -95,22 +91,24 @@ header .nav-account {
 }
 
 #myNavbar .main-nav a img{
-    width:25px;
-     position: relative;
-     transform: translateX(-80px);
-     opacity: 10000px;
-     cursor: pointer;
-     line-height: 45px;
-      float: left;
-    
+    width:22px;
+    position: relative;
+    transform: translateX(-80px);
+    opacity: 10000px;
+    cursor: pointer;
+    line-height: 45px;
+    float: left;
     margin-top: 6px;
-    margin-left: -50px;
-  
+    margin-left: -65px; 
 }
+
 #myNavbar ul li a{
-    padding-right:20px;
+    margin-right:5px;
     color: #1c1c1c;
     text-decoration: none;
+    font-size: 15px;
+    padding-left:12px;
+    padding-right: 12px;
     }
 
     #myNavbar ul li a:hover{
@@ -118,33 +116,14 @@ header .nav-account {
     }
 
  #myNavbar ul li a#navbar-mymusic{
-     margin-left: -80px;
+     margin-left: -110px;
  }
-nav {
-    width: 100%;
-    min-width: 1000px;
-    height: 40px;
-}
+
 nav .container {
     background: #e4e4e4;
     width: 1000px;
     margin: 0 auto;
     overflow: visible;
-}
-
-.container {
-    width: 970px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-
-#navbar-top100{
-/*margin-left: -140px;*/
-line-height: 45px;
-font-size: 15px;
-font-style: Arial;
 }
 
 #navbar-top100:hover> ul{
@@ -154,8 +133,6 @@ font-style: Arial;
     margin-left: 150px;
     height: 40px;
 }
-
-
 
 #myNavbar ul
 {
@@ -170,10 +147,9 @@ font-style: Arial;
 {
   display:block;
   text-decoration:none;
-  font-weight:700;
-  line-height:43px;
+  font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+  line-height:40px;
 }
-
 
 #myNavbar ul li
 {
@@ -183,13 +159,7 @@ font-style: Arial;
   padding:0
 }
 
-
-#myNavbar ul li:hover
-{
-  background:#f6f6f6
-}
-
-#myNavbar ul ul
+#myNavbar ul li ul
 {
   display:none;
   position:absolute;
@@ -200,16 +170,33 @@ font-style: Arial;
 
 }
 
-#myNavbar ul ul li
+#myNavbar ul li ul li
 {
-  float:none;
-  width:240px;
+ position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+  width: 150px;
 }
 
 #myNavbar ul ul a
 {
   line-height:120%;
-  padding:10px 15px;
+  padding:10px 20px;
+  
+}
+
+#myNavbar ul ul li a:hover
+{
+   margin: 0px 0px;
+}
+
+#myNavbar ul li a:hover
+{
+  display:block;
+  z-index:10000;
+  background-color: #fff;
+  position: relative;
 }
 
 
@@ -217,7 +204,7 @@ font-style: Arial;
 {
   display:block;
   z-index:10000;
-   border-radius:3px;
+  border-radius:3px;
 }
 
 
