@@ -9,7 +9,10 @@
             <form action="/tim-kiem/bai-hat.html" method="get" class="search">
                 <input type="text" name="q" placeholder="Nhập nội dung cần tìm" class="input-txt" autocomplete="off">
                 <span class="input-btn">
-                    <button type="submit" class="zicon btn hide-text">Tìm kiếm</button>
+                     <a href="/" title="Zing MP3 - Đỉnh cao âm nhạc" class="">
+                        <img src="../assets/icon/magnifying-glass.png" alt="Home Page">
+                     </a>
+                    <!-- <button type="submit" class="zicon btn hide-text">Tìm kiếm</button> -->
                 </span>
             </form>
         
@@ -17,99 +20,106 @@
     
         <div class="nav-account pull-right fn-guestbox">
              <img class="" src="../assets/icon/user.png"> &nbsp;
-            <a class="fn-login" href="#" title="Đăng nhập"> Login |</a> 
-            <a class="fn-login" href="#" title="Đăng xuất"> Register</a>
+            <a class="fn-login" href="#" data-toggle="modal" 
+                data-target="#LoginForm" title="Đăng nhập"> Login |</a> 
+            <a class="fn-login" href="#" data-toggle="modal" 
+                data-target="#RegisterForm" title="Đăng xuất"> Register</a>
         </div>
     </div>
 </header>
 
 <nav>
-    <div class="container" id="myNavbar">
-        <ul class="main-nav group">
-                <a href="/" title="Zing MP3 - Đỉnh cao âm nhạc" class="">
+    <div class="container group" id="myNavbar">
+        <div class="menubar">
+            <a href="/" title="Zing MP3 - Đỉnh cao âm nhạc" class="img">
                     <img src="../assets/icon/homepage.png" alt="Home Page">
-                </a>
-           
-            <li class="active"><a id="navbar-mymusic" class="fn-login" href="/mymusic" title="Nhạc cá nhân">Private Song</a> 
-                <!--<ul>
-                    <li><a href="/mymusic/favorites-song" title="Yêu thích">Yêu Thích</a></li>
-                    <li><a href="/mymusic/myplaylist" title="Playlist cá nhân">Playlist Cá Nhân</a></li>
-                    <li><a href="/mymusic/following-artist" title="Quan tâm">Quan tâm</a></li>
-                    <li><a href="/mymusic/upload" title="Nhạc upload">Nhạc Upload</a></li>            
-                    <li><a href="/u/" title="Kênh của tôi" class="fn-my-channel">Kênh của tôi</a></li>
-                </ul>-->
-            </li>            
-     
-            <li><a id="navbar-top100" title="Top 100" href="/top100/Nhac-Tre/IWZ9Z088.html">Genre</a>
+            </a>
+        </div>
+        <div id="sug" class="section-search"> 
+            <ul class="main-nav group">
+
+            <li class="active"><a id="navbar-mymusic" class="fn-login" href="/mymusic" title="Nhạc cá nhân">Private Song</a> </li>  
+            <li><a id="navbar-top100" title="Top 100" [routerLink]="['/genre']">Genre</a>
                 <ul>
-                    <li><a title="Việt Nam" href="/top100/Nhac-Tre/IWZ9Z088.html">Việt Nam</a></li>
-                    <li><a title="Âu Mỹ" href="/top100/Pop/IWZ9Z097.html">Âu Mỹ</a></li>
-                    <li><a title="Châu Á" href="/top100/Kpop/IWZ9Z08W.html">Châu Á</a></li>
-                    <li><a title="Hòa Tấu" href="/top100/Classical/IWZ9Z0BI.html">Hòa Tấu</a></li>
+                    <li><a title="Việt Nam" [routerLink]="['/genre']">EDM</a></li>
+                    <li><a title="Âu Mỹ" [routerLink]="['/genre']">Indie</a></li>
+                    <li><a title="Châu Á" [routerLink]="['/path']">Bolero</a></li>
+                    <li><a title="Hòa Tấu" [routerLink]="['/path']">Acoutic</a></li>
                 </ul>
             </li>
   
-            <li><a id="navbar-genreartist" title="Nghệ Sĩ" href="/the-loai-nghe-si">Singer</a>
+            <li><a id="navbar-genreartist" title="Nghệ Sĩ" [routerLink]="['/path']">Singer</a>
                 <ul>
-                    <li><a title="Việt Nam" href="/the-loai-nghe-si/Viet-Nam/IWZ9Z08I.html">Việt Nam</a></li>
-                    <li><a title="Âu Mỹ" href="/the-loai-nghe-si/US-UK/IWZ9Z08O.html">Âu Mỹ</a></li>
-                    <li><a title="Hàn Quốc" href="/the-loai-nghe-si/Kpop/IWZ9Z08W.html">Hàn Quốc</a></li>
-                    <li><a title="Nhật Bản" href="/the-loai-nghe-si/Nhat-Ban/IWZ9Z08Z.html">Nhật Bản</a></li>
-                    <li><a title="Hao Ngữ" href="/the-loai-nghe-si/Hoa-Ngu/IWZ9Z08U.html">Hoa Ngữ</a></li>
-                    <li><a title="Hòa Tấu" href="/the-loai-nghe-si/Hoa-Tau/IWZ9Z086.html">Hòa Tấu</a></li>
+                    <li><a title="Việt Nam" [routerLink]="['/path']">Việt Nam</a></li>
+                    <li><a title="Âu Mỹ" [routerLink]="['/path']">Âu Mỹ</a></li>
+                    <li><a title="Hàn Quốc" [routerLink]="['/path']">Hàn Quốc</a></li>
+                    <li><a title="Nhật Bản" [routerLink]="['/path']">Nhật Bản</a></li>
+                    <li><a title="Hao Ngữ" [routerLink]="['/path']">Hoa Ngữ</a></li>
+                    <li><a title="Hòa Tấu" [routerLink]="['/path']">Hòa Tấu</a></li>
                 </ul>
             </li>
-        </ul>
+
+
+              </ul>
+        
+        </div>
     </div>
 </nav>
 
-<!--<div class="menubar">
-        <div class="home">
-            <a href="/" title="Zing MP3 - Đỉnh cao âm nhạc" class="hide-text">
-                <img src="../assets/icon/homepage.png" alt="Home Page">
-            </a>
+
+<div class="modal fade" id="LoginForm" tabindex="-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="ModalTitle">Login</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+             <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+             <input type="password" class="form-control" name="password" placeholder="Password" required=""/> 
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar" >
-          <ul class="nav navbar-nav" >
-            <li><a [routerLink]="['/home']"><span class="glyphicon glyphicon-home"></span>TRANG CHỦ </a></li>
-            <li class="active mproduct" ><a [routerLink]="['/product']">DANH MỤC SẢN PHẨM</a>
-              <ul class="menu-bar" >
-                  <li><a [routerLink]="['/cakedeo']">Bánh Dẻo</a></li>
-                  <li><a href="#">Bánh Nướng</a></li>
-                  <li><a href="#">Bánh Trăng Vàng Cao Cấp</a></li>
-              </ul>
-            </li>
-            <li><a [routerLink]="['/specialfood']">SẢN PHẨM TIÊU BIỂU</a></li>
-            <li class="contact"><a href="" >LIÊN HỆ</a></li> 
-          </ul>  
-       </div>-->
-    
-        
-    
 
-
-    <!--<nav class="navbar nav-color">
-      <div class="container-fluid">
+        <div class="form-group submit">
+            <button type="button" class="btn btn-primary">Login</button>
+         </div>
+      </div>
       
-        <div class="collapse navbar-collapse" id="myNavbar" >
-          <ul class="nav navbar-nav" >
-            <li><a [routerLink]="['/home']"><span class="glyphicon glyphicon-home"></span>TRANG CHỦ </a></li>
-            <li class="active mproduct" ><a [routerLink]="['/product']">DANH MỤC SẢN PHẨM</a>
-              <ul class="menu-bar" >
-                  <li><a [routerLink]="['/cakedeo']">Bánh Dẻo</a></li>
-                  <li><a href="#">Bánh Nướng</a></li>
-                  <li><a href="#">Bánh Trăng Vàng Cao Cấp</a></li>
-              </ul>
-            </li>
-            <li><a [routerLink]="['/specialfood']">SẢN PHẨM TIÊU BIỂU</a></li>
-            <li class="contact"><a href="" >LIÊN HỆ</a></li> 
-          </ul>  
-
-           <input id="search" name="search" value="Tìm kiếm ..." maxlength="27" class="inputbox" type="search"> 
-           <i class="fa fa-search" aria-hidden="true"></i> 
-       </div>
     </div>
-  </nav>-->
-<!--</div>-->
+  </div>
+
+</div>
+
+
+<div class="modal fade" id="RegisterForm" tabindex="-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="ModalTitle">Register</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+             <input type="text" class="form-control" name="Username" placeholder="username" required="" autofocus="" />
+             <input type="password" class="form-control" name="Password" placeholder="password" required=""/> 
+             <input type="text" class="form-control" name="repassword" placeholder="Retype password" required=""/> 
+             <input type="email" class="form-control" name="password" placeholder="Email" required=""/> 
+        </div>
+
+        <div class="form-group submit">
+            <button type="button" class="btn btn-primary">Submit</button>
+         </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
 
 
